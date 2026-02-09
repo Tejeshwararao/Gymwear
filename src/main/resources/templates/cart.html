@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Your Cart</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<h1>Your Shopping Cart</h1>
+<a href="/">Back to Shop</a>
+
+<div class="container">
+<div class="card" th:each="c : ${cart}">
+<img th:src="${c.image}" />
+<h3 th:text="${c.name}"></h3>
+<p>₹<span th:text="${c.price}"></span></p>
+</div>
+</div>
+
+</body>
+</html>
